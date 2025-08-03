@@ -11,14 +11,14 @@ fi
 
 # Create Python virtual environment if needed
 if [ ! -d ".venv" ]; then
-  python3 -m venv .venv
+  python -m venv .venv
 fi
-source .venv/bin/activate
+source .venv/Scripts/activate
 
 # Install Python dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install -r chaplin/requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip install -r chaplin/requirements.txt
 
 if [ "$1" != "--no-run" ]; then
   python chaplin/main.py "$@"
