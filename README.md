@@ -4,7 +4,7 @@ This project is a complete setup for real-time lip-reading using the Chaplin mod
 
 ## 🧰 Simple Setup
 
-Clone the repository and run the setup script:
+Clone the repository and run the setup script (requires Python 3.10 or 3.11 due to Mediapipe's wheel support):
 
 ```bash
 git clone <REPO_URL>
@@ -31,7 +31,7 @@ make run     # launches the lip-reading demo
 - **Chaplin (Core Model)**: https://github.com/amanvirparhar/chaplin
 - **CUDA Toolkit (GPU acceleration)**: https://developer.nvidia.com/cuda-downloads
 - **Git**: https://git-scm.com/download/win
-- **Python 3.10+**: https://www.python.org/downloads/windows/
+- **Python 3.10 or 3.11**: https://www.python.org/downloads/windows/
 - **PyTorch (Deep Learning Engine)**: https://pytorch.org/get-started/locally/
 - **Ollama (LLM support)**: https://ollama.com/download/windows
 
@@ -44,8 +44,9 @@ make run     # launches the lip-reading demo
 2. **Download the Chaplin model**
    - `run.sh` checks for `chaplin/` and clones [Chaplin](https://github.com/amanvirparhar/chaplin) if missing.
 3. **Create a virtual environment**
+   Use Python 3.10 or 3.11 explicitly if your system's default is newer:
    ```bash
-   python3 -m venv .venv
+   python3.10 -m venv .venv  # or python3.11
    source .venv/bin/activate
    ```
 4. **Install dependencies**
