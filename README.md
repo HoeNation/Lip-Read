@@ -2,6 +2,20 @@
 
 This project is a complete setup for real-time lip-reading using the Chaplin model and optional integration with language models (LLMs) via Ollama.
 
+## 🚀 Quick Start
+
+```bash
+git clone <REPO_URL>
+cd Lip-Read
+./run.sh
+```
+
+The `run.sh` script automatically downloads the Chaplin repository, creates a Python virtual environment, installs the required Python packages, and launches the demo. To prepare the environment without running the model, use:
+
+```bash
+./run.sh --no-run
+```
+
 ## 🔗 Components
 - **Chaplin (Core Model)**: https://github.com/amanvirparhar/chaplin
 - **CUDA Toolkit (GPU acceleration)**: https://developer.nvidia.com/cuda-downloads
@@ -10,7 +24,7 @@ This project is a complete setup for real-time lip-reading using the Chaplin mod
 - **PyTorch (Deep Learning Engine)**: https://pytorch.org/get-started/locally/
 - **Ollama (LLM support)**: https://ollama.com/download/windows
 
-## 🚀 Setup Instructions
+## 📁 Manual Setup
 1. Install dependencies using files in the `install/` folder.
 2. Clone the repo and create a virtual environment.
-3. Run `chaplin/main.py` to begin.
+3. Download the Chaplin repository into `chaplin/` and run `chaplin/main.py` to begin.
