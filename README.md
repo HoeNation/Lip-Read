@@ -16,6 +16,15 @@ The `run.sh` script automatically downloads the Chaplin repository, creates a Py
 ./run.sh --no-run
 ```
 
+### Windows 11 with Make
+
+If you're using Git Bash or another environment with `make`, you can set up and run the demo using:
+
+```bash
+make setup   # downloads Chaplin and installs dependencies
+make run     # launches the lip-reading demo
+```
+
 ## 🔗 Components
 - **Chaplin (Core Model)**: https://github.com/amanvirparhar/chaplin
 - **CUDA Toolkit (GPU acceleration)**: https://developer.nvidia.com/cuda-downloads
