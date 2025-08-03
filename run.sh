@@ -2,6 +2,17 @@
 # Simple setup and execution script for the Lip-Read project
 set -e
 
+# Ensure we are running on a Python version supported by Mediapipe
+PY_VERSION=$(python3 -c 'import sys; print("{}.{}".format(*sys.version_info[:2]))')
+case $PY_VERSION in
+  3.10|3.11)
+    ;; # supported
+  *)
+    echo "Error: Python $PY_VERSION detected. Please use Python 3.10 or 3.11." >&2
+    exit 1
+    ;;
+esac
+
 # Clone Chaplin repository if missing
 if [ ! -d "chaplin/.git" ]; then
   echo "Downloading Chaplin model repository..."
