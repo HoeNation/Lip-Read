@@ -18,6 +18,7 @@ source .venv/bin/activate
 # Install Python dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
+pip install -r chaplin/requirements.txt
 
 if [ "$1" != "--no-run" ]; then
   python chaplin/main.py "$@"
