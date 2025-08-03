@@ -59,3 +59,26 @@ make run     # launches the lip-reading demo
    python chaplin/main.py
    ```
    Running `./run.sh` executes these steps automatically and starts the model unless you pass `--no-run`.
+
+## 🐳 Docker
+
+A Dockerfile is included to run the demo inside a container.
+
+Build the image:
+
+```bash
+docker build -t lip-read .
+```
+
+Run the demo:
+
+```bash
+docker run --rm -it lip-read
+```
+
+To upload the image to Docker Hub:
+
+```bash
+docker tag lip-read <your-username>/lip-read:latest
+docker push <your-username>/lip-read:latest
+```
