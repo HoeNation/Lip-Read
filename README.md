@@ -2,7 +2,9 @@
 
 This project is a complete setup for real-time lip-reading using the Chaplin model and optional integration with language models (LLMs) via Ollama.
 
-## 🚀 Quick Start
+## 🧰 Simple Setup
+
+Clone the repository and run the setup script:
 
 ```bash
 git clone <REPO_URL>
@@ -10,7 +12,7 @@ cd Lip-Read
 ./run.sh
 ```
 
-The `run.sh` script automatically downloads the Chaplin repository, creates a Python virtual environment, installs the required Python packages, and launches the demo. To prepare the environment without running the model, use:
+The `run.sh` script downloads the Chaplin model, creates a Python virtual environment, installs dependencies, and launches the demo. To prepare the environment without starting the demo, run:
 
 ```bash
 ./run.sh --no-run
@@ -33,7 +35,26 @@ make run     # launches the lip-reading demo
 - **PyTorch (Deep Learning Engine)**: https://pytorch.org/get-started/locally/
 - **Ollama (LLM support)**: https://ollama.com/download/windows
 
-## 📁 Manual Setup
-1. Install dependencies using files in the `install/` folder.
-2. Clone the repo and create a virtual environment.
-3. Download the Chaplin repository into `chaplin/` and run `chaplin/main.py` to begin.
+## 🔍 Detailed Walkthrough
+1. **Clone the project**
+   ```bash
+   git clone <REPO_URL>
+   cd Lip-Read
+   ```
+2. **Download the Chaplin model**
+   - `run.sh` checks for `chaplin/` and clones [Chaplin](https://github.com/amanvirparhar/chaplin) if missing.
+3. **Create a virtual environment**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+4. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   pip install -r chaplin/requirements.txt
+   ```
+5. **Run the demo**
+   ```bash
+   python chaplin/main.py
+   ```
+   Running `./run.sh` executes these steps automatically and starts the model unless you pass `--no-run`.
