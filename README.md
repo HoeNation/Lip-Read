@@ -82,3 +82,8 @@ To upload the image to Docker Hub:
 docker tag lip-read <your-username>/lip-read:latest
 docker push <your-username>/lip-read:latest
 ```
+
+## 🤝 Contributing
+
+Contributions are welcome! If you encounter bugs or have ideas for improvements, please open an issue or submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
