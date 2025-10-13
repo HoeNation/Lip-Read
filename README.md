@@ -4,7 +4,7 @@ This project is a complete setup for real-time lip-reading using the Chaplin mod
 
 ## 🧰 Simple Setup
 
-Clone the repository and run the setup script (requires Python 3.10 or 3.11 due to Mediapipe's wheel support):
+Clone the repository and run the setup script (requires Python 3.10 or 3.11 due to Mediapipe's wheel support). The script automatically locates a supported interpreter (including the Windows `py` launcher), prepares a virtual environment, and downloads the Chaplin assets if they are missing:
 
 ```bash
 git clone <REPO_URL>
